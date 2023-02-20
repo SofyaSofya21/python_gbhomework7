@@ -14,9 +14,7 @@
 
 def count_vowels(phrase):
     vowels_list = ['а', 'о', 'у', 'ы', 'э', 'я', 'ё', 'ю', 'и', 'е']
-    for i in range(len(phrase)):
-        phrase[i] = len(list(filter(lambda x: x in vowels_list, phrase[i])))
-    return phrase
+    return [len(list(filter(lambda x: x in vowels_list, phrase[i]))) for i in range(len(phrase))]
 
 def check_rythm(poetry_list):
     phrases_list = count_vowels(poetry_list.split())
